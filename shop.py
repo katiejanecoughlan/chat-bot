@@ -1,20 +1,25 @@
 print("""
-Welcome to your favourite childhood game:
- I Went to the Shop and I bought!
- """)
+Welcome to your favorite childhood game:
+I Went to the Shop and I Bought!
+""")
 
-stuff_to_buy = input("What did you buy?")
+# Initialize an empty list to store items
+stuff_to_buy = []
 
-print("I went to the shop and I bought " + stuff_to_buy)
+# Main game loop
+while True:
+    # Ask the player for an item
+    item = input("What did you buy? (type 'exit' to end the game) ")
 
-print("Then...")
+    # Check if the player wants to stop adding items
+    if item.lower() == 'exit':
+        break  # Exit the loop if 'exit' is entered
 
-stuff_to_buy_2 = input("What did you buy?")
+    # Add the item to the list
+    stuff_to_buy.append(item)
 
-print("I went to the shop and I bought: " + stuff_to_buy + " and " + stuff_to_buy_2)
+    # Display the current list of items
+    print("I went to the shop and I bought: " + ", ".join(stuff_to_buy))
 
-print("Then...")
-
-stuff_to_buy_3 = input("What did you buy?")
-
-print("I went to the shop and I bought: " + stuff_to_buy + ", " + stuff_to_buy_2 + " and " + stuff_to_buy_3)
+# Game ended
+print("Go raibh maith agat for playing!")
